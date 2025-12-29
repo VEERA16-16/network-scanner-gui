@@ -1,0 +1,9 @@
+import base64
+
+with open('open_ports_chart.b64', 'r') as f:
+    b64_data = f.read()
+
+img_data = base64.b64decode(b64_data)
+
+with open('open_ports_chart.jpg', 'wb') as f:
+    f.write(img_data)
